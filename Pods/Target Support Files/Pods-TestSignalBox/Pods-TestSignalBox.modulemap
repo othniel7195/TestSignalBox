@@ -1,0 +1,6 @@
+framework module Pods_TestSignalBox {
+  umbrella header "Pods-TestSignalBox-umbrella.h"
+
+  export *
+  module * { export * }
+}

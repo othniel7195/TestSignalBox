@@ -1,0 +1,16 @@
+PODS:
+  - SignalBox (0.1.0)
+
+DEPENDENCIES:
+  - SignalBox (from `../../../SignalBox/`)
+
+EXTERNAL SOURCES:
+  SignalBox:
+    :path: "../../../SignalBox/"
+
+SPEC CHECKSUMS:
+  SignalBox: 67d4ea09f739689a9cff71f8fb3ebf148cf0f3ac
+
+PODFILE CHECKSUM: 8ef80338ade1f2d639d9b933a2000663fb6fc783
+
+COCOAPODS: 1.10.1
