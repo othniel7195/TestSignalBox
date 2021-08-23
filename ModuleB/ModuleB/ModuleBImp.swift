@@ -56,6 +56,7 @@ extension ModuleBProvider: ModuleURLMap {
         return ["signalbox://moduleB.route1": ModuleBTestURLRoute.moduleBTestURLRoute1,
                 "signalbox://moduleB.route2/<string:p1>": ModuleBTestURLRoute.moduleBTestURLRoute2WithValues,
                 "signalbox://moduleB.route3": ModuleBTestURLRoute.moduleBTestURLRoute3WithItems,
+                "signalbox://moduleB.route4": ModuleBTestURLRoute.moduleBTestURLRoute4,
         ]
     }
 }
@@ -97,5 +98,14 @@ class ModuleBTestURLRoute {
             return [item.name: item.value ?? "NULL"]
         })
         return .failed(item ?? "NULL")
+    }
+    static func moduleBTestURLRoute4(_ url: URLAnalysis, _ values: [String: Any], _ context: Any?) -> URLOpenResult {
+        if let b = context as? () -> Void {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                b()
+            }
+        }
+        
+        return .voidSuccess
     }
 }

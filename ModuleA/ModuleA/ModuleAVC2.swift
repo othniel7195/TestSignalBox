@@ -49,7 +49,10 @@ class MAVC2: UIViewController {
     
     @objc func dotoB() {
         _ = SignalBox.shared.router.handler(url: "signalbox://moduleB.route1")
-        let r = SignalBox.shared.router.handler(url: "signalbox://moduleB.route2/123")
+        let b = {
+            print("call back to m a vc2  do to B")
+        }
+        let r = SignalBox.shared.router.handler(url: "signalbox://moduleB.route4", context: b)
         switch r {
         case .success(let v):
             SignalBox.shared.router.present("signalbox://mbv2/\(v)")

@@ -55,4 +55,3 @@ class ViewController: UIViewController {
         SignalBox.shared.router.present("signalbox://mav2?p1=wwww")
     }
 }
-

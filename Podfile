@@ -10,15 +10,15 @@ use_frameworks!
 
 target 'TestSignalBox' do
   project 'TestSignalBox.xcodeproj'
-  pod 'SignalBox', :path => '../../../SignalBox/'
+  pod 'SignalBox', :path => '../SignalBox/'
 end
 
 target 'ModuleA' do
   project 'ModuleA/ModuleA.xcodeproj'
-  pod 'SignalBox', :path => '../../../SignalBox/'
+  pod 'SignalBox', :path => '../SignalBox/'
 end
 
 target 'ModuleB' do
   project 'ModuleB/ModuleB.xcodeproj'
-  pod 'SignalBox', :path => '../../../SignalBox/'
+  pod 'SignalBox', :path => '../SignalBox/'
 end
